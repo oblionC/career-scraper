@@ -30,9 +30,7 @@ def collect_data():
     for career_category in categories:
         career_category.click()
         sleep(2)
+        career_scraper.driver.find_element(By.CSS_SELECTOR, "#ajax_block > div > div.container > div").click()
 
-
-        career_scraper.driver.find_element(By.CSS_SELECTOR, ".close").click()
-        sleep(2)
 
 collect_data()
